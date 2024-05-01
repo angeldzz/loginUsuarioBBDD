@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="875.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daw.loginv1.SecondaryController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1258.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cerrar" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu fx:id="menuGU" mnemonicParsing="false" text="Gestion de Usuario" visible="false">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Modificar Usuario" />
+                  <MenuItem mnemonicParsing="false" onAction="#altaUsuario" text="Alta Usuario" />
+                  <MenuItem mnemonicParsing="false" text="Baja Usuario" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnHacerAlgo" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" onAction="#hacerAlgo" prefHeight="25.0" prefWidth="140.0" text="hacer algo" />
+      <CheckBox fx:id="cbPuente" layoutX="34.0" layoutY="97.0" mnemonicParsing="false" text="puente" />
+      <ChoiceBox fx:id="chbLugares" layoutX="29.0" layoutY="142.0" prefWidth="150.0" />
+      <ColorPicker layoutX="35.0" layoutY="199.0" promptText="Selecciona el Color" />
+      <ComboBox layoutX="29.0" layoutY="256.0" prefWidth="150.0" />
+      <DatePicker layoutX="17.0" layoutY="309.0" />
+      <Hyperlink layoutX="75.0" layoutY="357.0" text="Hyperlink" />
+      <ListView fx:id="lvListaNombres" layoutX="1044.0" layoutY="34.0" prefHeight="391.0" prefWidth="200.0" />
+      <ProgressBar layoutX="395.0" layoutY="68.0" prefHeight="18.0" prefWidth="353.0" progress="0.47" />
+      <ProgressIndicator layoutX="357.0" layoutY="57.0" progress="0.32" />
+      <RadioButton layoutX="369.0" layoutY="125.0" mnemonicParsing="false" selected="true" text="si">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgSelector" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="369.0" layoutY="159.0" mnemonicParsing="false" text="no" toggleGroup="$tgSelector" />
+      <RadioButton layoutX="369.0" layoutY="191.0" mnemonicParsing="false" text="puede" toggleGroup="$tgSelector" />
+      <Spinner layoutX="330.0" layoutY="230.0" />
+      <TableView fx:id="tvMiTabla" layoutX="220.0" layoutY="322.0" prefHeight="450.0" prefWidth="799.0">
+        <columns>
+          <TableColumn fx:id="c1" prefWidth="130.0" text="Nombre" />
+          <TableColumn fx:id="c2" prefWidth="202.0" text="Apellidos" />
+            <TableColumn fx:id="c3" prefWidth="52.0" text="Edad" />
+            <TableColumn fx:id="c4" prefWidth="252.0" text="Direccion" />
+            <TableColumn fx:id="c5" prefWidth="162.0" text="Poblacion" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
